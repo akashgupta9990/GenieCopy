@@ -21,6 +21,7 @@ package io.cordova.hellocordova;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import android.util.Log;
 
 public class MainActivity extends CordovaActivity
 {
@@ -28,6 +29,7 @@ public class MainActivity extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        Log.i("calling MainActivity of", "Cordova");
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }
