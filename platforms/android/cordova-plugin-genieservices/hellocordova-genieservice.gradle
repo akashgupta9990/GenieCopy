@@ -1,0 +1,15 @@
+repositories {
+    maven { url "https://platform.ekstep.in/downloads/content/repositories/releases" }
+}
+
+dependencies {
+    compile "org.ekstep.genieservices:sdks:1.5.+@aar"
+    compile "org.ekstep.genieservices:aidls:1.5.+@aar"
+}
+
+android {
+  packagingOptions {
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+}

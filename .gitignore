@@ -17,6 +17,6 @@ platforms/android/CordovaLib/build/
 platforms/android/assets/www/plugins
 plugins/
 platforms/android/platform_www/plugins
-platforms/android/libs
+platforms/android/libs/*
 platforms/android/res/xml/config.xml
 

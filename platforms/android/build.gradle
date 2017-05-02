@@ -93,6 +93,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "cordova-plugin-genieservices/hellocordova-genieservice.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -252,13 +253,10 @@ android {
 dependencies {
     final GENIE_SERVICE_VERSION = '1.5.17@aar'
     compile fileTree(dir: 'libs', include: '*.jar')
+    compile(name:'CordovaLib',ext:'aar')
+    compile(name:'geniecanvas-local-debug',ext:'aar')
     compile "org.ekstep.genieservices:aidls:$GENIE_SERVICE_VERSION"
     compile "org.ekstep.genieservices:sdks:$GENIE_SERVICE_VERSION"
-    // SUB-PROJECT DEPENDENCIES START
-    debugCompile project(path: "CordovaLib", configuration: "debug")
-    releaseCompile project(path: "CordovaLib", configuration: "release")
-    // SUB-PROJECT DEPENDENCIES END
-    compile(name:'geniecanvas-local-debug',ext:'aar')
 }
 
 def promptForReleaseKeyPassword() {
